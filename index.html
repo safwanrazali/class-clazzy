@@ -21,6 +21,28 @@
       h1 {
         font-family: Georgia, 'Times New Roman', Times, serif;
       }
+
+      table, td, th {
+        border: black;
+        border-style: double;
+        padding: 10px;
+      }
+
+      #myTable {
+        font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+      }
+
+      #myTable tr:nth-child(even) {
+        background-color: yellowgreen;
+      }
+
+      #myTable tr:hover {
+        background-color: yellow;
+      }
+
+      #myTable tr:active {
+        background-color: aqua;
+      }
     </style>
 </head>
 <body>
@@ -34,30 +56,30 @@
 
     <br/>
     <br/>
-    <table>
+    <table id="myTable">
         <tr>
-          <th>Company</th>
-          <th>Contact</th>
-          <th>Country</th>
-          <th>Company</th>
-          <th>Contact</th>
-          <th>Country</th>
+          <th>Session</th>
+          <th>Content</th>
+          <th>Date</th>
+          
         </tr>
         <tr>
-          <td>Alfreds Futterkiste</td>
-          <td>Maria Anders</td>
-          <td>Germany</td>
-          <td>Alfreds Futterkiste</td>
-          <td>Maria Anders</td>
-          <td>Germany</td>
+          <td>First</td>
+          <td>HTML</td>
+          <td>15 Sept 2022</td>
+          
         </tr>
         <tr>
-          <td>Centro comercial Moctezuma</td>
-          <td>Francisco Chang</td>
-          <td>Mexico</td>
-          <td>Alfreds Futterkiste</td>
-          <td>Maria Anders</td>
-          <td>Germany</td>
+          <td>Second</td>
+          <td>CSS</td>
+          <td>19 Sept 2022</td>
+         
+        </tr>
+        <tr>
+          <td>Third</td>
+          <td>Javascript</td>
+          <td>22 Sept 2022</td>
+         
         </tr>
       </table>
 
