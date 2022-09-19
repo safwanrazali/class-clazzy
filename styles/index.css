@@ -1,0 +1,21 @@
+.footerAnimation {
+    animation: leftToRight 5s infinite linear;
+    animation-iteration-count: 3;
+    font-size: 50px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+@keyframes leftToRight {
+    0% {
+        margin-left: 10px;
+        background-color: yellowgreen;
+    }
+
+    20% {margin-left: 100px;}
+
+    40% {margin-left: 150px;}
+
+    80% {margin-left: 200px;}
+
+    100% {margin-left: 300px;}
+}
