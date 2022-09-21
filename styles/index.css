@@ -7,6 +7,30 @@
     text-decoration: none;
     display: inline-block;
     font-size: 16px;
+    cursor: pointer;
+    border-radius: 10px;
+}
+
+.shadowBtn:hover {
+    box-shadow: 9px 9px yellow;
+}
+
+.shadowBtn:active {
+    background-color: cornflowerblue;
+    box-shadow: 5px 5px black;
+    transform: translateY(4px);
+    color: black;
+}
+
+.myInput {
+    border: none;
+    background-color: antiquewhite;
+    padding: 15px 5px;
+    text-align: start;
+    display: inline-block;
+    font-size: 16px;
+    width: 200px;
+    border-radius: 10px;
 }
 
 .footerAnimation {
@@ -22,11 +46,19 @@
         background-color: yellowgreen;
     }
 
-    20% {margin-left: 100px;}
+    20% {
+        margin-left: 100px;
+    }
 
-    40% {margin-left: 150px;}
+    40% {
+        margin-left: 150px;
+    }
 
-    80% {margin-left: 200px;}
+    80% {
+        margin-left: 200px;
+    }
 
-    100% {margin-left: 300px;}
+    100% {
+        margin-left: 300px;
+    }
 }
