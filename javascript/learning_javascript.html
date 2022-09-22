@@ -1,37 +1,94 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Learning Javascript</title>
+
+    <style>
+        .styleBtn {
+            font-size: 50px;
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+            font-weight: bold;
+            color: yellowgreen;
+        }
+
+        .animateBtn {
+            animation: leftToRight 5s infinite linear;
+        }
+
+        @keyframes leftToRight {
+            0% {
+                margin-left: 10px;
+                background-color: yellowgreen;
+            }
+
+            20% {
+                margin-left: 100px;
+            }
+
+            40% {
+                margin-left: 150px;
+            }
+
+            80% {
+                margin-left: 200px;
+            }
+
+            100% {
+                margin-left: 300px;
+            }
+        }
+    </style>
 </head>
+
 <body>
 
-<p id="counter"> 1 </p>
+    <p id="counter"> 1 </p>
 
 
-<button onclick="plusBtn()"> Plus </button>
+    <button onclick="plusBtn()"> Plus </button>
 
-<button onclick="minusBtn()"> Minus </button>
+    <button onclick="minusBtn()"> Minus </button>
+
+    <button onclick="myStyle()"> Add Style </button>
+
+    <button onclick="myAnimate()"> Add Animation</button>
 
 
 
-<script>
-    const plusBtn = () => {
-        console.log('I am clicked!')
-        const counter = document.getElementById('counter').innerText
-        console.log(counter)
-        document.getElementById('counter').innerText = Number(counter) +1
-    }
+    <script>
+        const plusBtn = () => {
+            console.log('I am clicked!')
+            const counter = document.getElementById('counter').innerText
+            console.log(counter)
+            document.getElementById('counter').innerText = Number(counter) + 1
+        }
 
-    const minusBtn = () => {
-        console.log('I am clicked!')
-        const counter = document.getElementById('counter').innerText
-        console.log(counter)
-        document.getElementById('counter').innerText = Number(counter) -1
-    }
-</script>
-    
+        const minusBtn = () => {
+            console.log('I am clicked!')
+            const counter = document.getElementById('counter').innerText
+            console.log(counter)
+            document.getElementById('counter').innerText = Number(counter) - 1
+        }
+
+        const myStyle = () => {
+            const counter = document.getElementById('counter')
+            const currentClass = counter.getAttribute("class")
+            counter.setAttribute("class", currentClass + " styleBtn")
+        }
+
+        const myAnimate = () => {
+            const counter = document.getElementById('counter')
+            const currentClass = counter.getAttribute("class")
+            counter.setAttribute("class", currentClass + " animateBtn")
+        }
+
+
+    </script>
+
 </body>
+
 </html>
