@@ -28,3 +28,17 @@ console.log ('\n')
 arr2.map (ele =>
 console.log ('map', ele)
 )
+
+let counter = 0
+
+while (counter < 4) {
+  counter++
+  console.log (counter)
+}
+
+
+do {
+  counter++
+  console.log (counter)
+}
+while (counter <10)
