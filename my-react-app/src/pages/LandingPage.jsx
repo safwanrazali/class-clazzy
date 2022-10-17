@@ -35,6 +35,7 @@ const LandingPage = () => {
             I am here
         </h3>
     </MyCard>
+    <MyCard description="I am props"/>
 
     </div>
 

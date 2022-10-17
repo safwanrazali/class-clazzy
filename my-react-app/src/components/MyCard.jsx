@@ -2,7 +2,9 @@ import React from "react";
 import myCardStyle from '../styles/MyCard.module.css';
 
 const MyCard = (props) => {
-    const {children} = props
+
+    const {children, description} = props
+
     return (
         <div >
             <div className={myCardStyle.container}>
@@ -11,6 +13,10 @@ const MyCard = (props) => {
             </h4>
             </div>
             <div className={myCardStyle.container}>
+                <p>
+                    {description}
+
+                </p>
             {children}
             </div>
         </div>
