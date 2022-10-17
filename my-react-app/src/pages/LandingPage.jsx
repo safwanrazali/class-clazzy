@@ -30,12 +30,8 @@ const LandingPage = () => {
 
     <input type={"text"} onChange={(evt) => setJob(evt.target.value)} />
     
-    <MyCard>
-        <h3>
-            I am here
-        </h3>
-    </MyCard>
-    <MyCard description="I am props"/>
+    <MyCard />
+    <MyCard />
 
     </div>
 
