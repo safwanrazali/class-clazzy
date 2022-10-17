@@ -1,4 +1,5 @@
 import React, {useState, useEffect} from "react";
+import MyCard from "../components/MyCard";
 
 const LandingPage = () => {
 
@@ -28,7 +29,16 @@ const LandingPage = () => {
     </h1>
 
     <input type={"text"} onChange={(evt) => setJob(evt.target.value)} />
+    
+    <MyCard>
+        <h3>
+            I am here
+        </h3>
+    </MyCard>
+
     </div>
+
+    
 
 
     )
