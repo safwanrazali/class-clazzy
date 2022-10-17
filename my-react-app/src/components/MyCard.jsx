@@ -1,13 +1,18 @@
 import React from "react";
+import myCardStyle from '../styles/MyCard.module.css';
 
 const MyCard = (props) => {
     const {children} = props
     return (
-        <div>
+        <div >
+            <div className={myCardStyle.container}>
             <h4>
                 This is a card component
             </h4>
+            </div>
+            <div className={myCardStyle.container}>
             {children}
+            </div>
         </div>
         
     )
