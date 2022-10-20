@@ -12,7 +12,7 @@ const MyCard = (props) => {
 
                 </p>
                 <button style={{marginRight:10}}>
-                    View
+                    Done
                 </button>
                 <button style={{marginRight:10}}>
                     Edit
