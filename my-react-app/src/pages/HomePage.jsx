@@ -6,13 +6,14 @@ import Typography from '@mui/material/Typography';
 import Button from '@mui/material/Button';
 import IconButton from '@mui/material/IconButton';
 import MenuIcon from '@mui/icons-material/Menu';
+import homePageStyle from '../styles/HomePage.module.css';
 
 import LandingPage from './LandingPage';
 
 export default function ButtonAppBar() {
   return (
     <Box sx={{ flexGrow: 1 }}>
-      <AppBar position="static">
+      <AppBar className={homePageStyle.themeColor} position="static">
         <Toolbar>
           <IconButton
             size="large"
@@ -23,10 +24,10 @@ export default function ButtonAppBar() {
           >
             <MenuIcon />
           </IconButton>
-          <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>
-            News
+          <Typography className={homePageStyle.font} sx={{ flexGrow: 1 }}>
+            My Todo List
           </Typography>
-          <Button color="inherit">Login</Button>
+          <Button className={homePageStyle.font} color="inherit">Login</Button>
         </Toolbar>
       </AppBar>
 
