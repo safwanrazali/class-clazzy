@@ -1,4 +1,4 @@
-.container {
+#container {
     display: flex;
     flex: 1;
     align-items: center;
@@ -6,14 +6,14 @@
     flex-direction: column;
 }
 
-.todo {
+#todo {
     background-color: #fbecfc;
     color: #6d1b7b;
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     border: 1px solid #6d1b7b;
 }
 
-.saveBtn {
+#saveBtn {
     background-color: #6d1b7b;
     color: #fbecfc;
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;

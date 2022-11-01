@@ -1,32 +1,35 @@
-import React, { useState } from "react";
+import React, { useReducer, useState } from "react";
 import MyCard from "../components/MyCard";
 import MyCard2 from "../components/MyCard2";
 import landingPageStyle from '../styles/LandingPage.module.css';
 
 import { TextField } from "@mui/material";
 import { Button } from "@mui/material";
+import { landingPageReducer, landingPageState } from "../reducer/LandingPageReducer";
 
 const LandingPage = () => {
+
+    const [state, dispatch] = useReducer(landingPageReducer, landingPageState);
 
     const [todo, setTodo] = useState('')
     const [todoList, setTodoList] = useState([])
     const [doneTodoList, setDoneTodoList] = useState([])
 
-    const onSave = () => {
+    // const onSave = () => {
 
-        if (todo === '') {
-            return
-        }
+    //     if (todo === '') {
+    //         return
+    //     }
 
-        // using spread operator to deep clone
-        const cloneTodoList = [...todoList]
+    //     // using spread operator to deep clone
+    //     const cloneTodoList = [...todoList]
 
-        cloneTodoList.push(todo)
+    //     cloneTodoList.push(todo)
 
-        setTodoList(cloneTodoList)
+    //     setTodoList(cloneTodoList)
 
-        setTodo('')
-    }
+    //     setTodo('')
+    // }
 
     const deleteTodo = (index) => {
         console.log('get index: ', index)
@@ -67,27 +70,26 @@ const LandingPage = () => {
         deleteTodo(index)
     }
     return (
-        <div className={landingPageStyle.container}>
+        <div id={landingPageStyle.container}>
 
             <div style={{ marginTop: 30, marginBottom: 30, width: 500 }}>
 
                 <TextField
-                    id="outlined-basic"
+                    id={`${landingPageStyle.todo} "outlined-basic" `}
                     label="Todo"
                     variant="outlined"
                     type="text"
-                    value={todo}
+                    value={state.todo}
                     size="normal"
-                    onChange={(evt) => setTodo(evt.target.value)}
+                    onChange={(evt) => dispatch({ type: 'TODO', payload: {todo:evt.target.value} })}
                     style={{ width: '81%' }}
-                    className={landingPageStyle.todo}
                 />
 
-                <Button className={landingPageStyle.saveBtn} variant="contained" size="large" sx={{ marginLeft: 1, height: 53 }} onClick={onSave}>Save</Button>
+                <Button id={landingPageStyle.saveBtn} variant="contained" size="large" sx={{ marginLeft: 1, height: 53 }} onClick={() => dispatch({type: 'SAVE'})}>Save</Button>
             </div>
 
             {
-                todoList.map((each, index) => (
+                state.todoList.map((each, index) => (
                     <MyCard key={index} index={index} description={each} deleteFunc={deleteTodo} doneFunc={doneTodo} editFunc={editTodo} />
                 ))
             }
