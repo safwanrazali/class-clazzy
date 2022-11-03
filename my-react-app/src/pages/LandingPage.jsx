@@ -14,6 +14,11 @@ const LandingPage = () => {
     const [todo, setTodo] = useState('')
     const [todoList, setTodoList] = useState([])
     const [doneTodoList, setDoneTodoList] = useState([])
+    
+    const onSave = (evt) => {
+        evt.preventDefault()
+        dispatch({type: 'SAVE'})
+    }
 
     // const onSave = () => {
 
@@ -74,6 +79,8 @@ const LandingPage = () => {
 
             <div style={{ marginTop: 30, marginBottom: 30, width: 500 }}>
 
+                <form onSubmit={onSave}>
+
                 <TextField
                     id={`${landingPageStyle.todo} "outlined-basic" `}
                     label="Todo"
@@ -83,9 +90,12 @@ const LandingPage = () => {
                     size="normal"
                     onChange={(evt) => dispatch({ type: 'TODO', payload: {todo:evt.target.value} })}
                     style={{ width: '81%' }}
+                    required
                 />
 
-                <Button id={landingPageStyle.saveBtn} variant="contained" size="large" sx={{ marginLeft: 1, height: 53 }} onClick={() => dispatch({type: 'SAVE'})}>Save</Button>
+                <Button id={landingPageStyle.saveBtn} variant="contained" size="large" sx={{ marginLeft: 1, height: 53 }} type="submit">Save</Button>
+
+                </form>
             </div>
 
             {
